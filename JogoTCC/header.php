@@ -18,7 +18,6 @@
 		<ul>
 			<li><a href="inicial.php">Home</a></li>
 			<li><a href="arena.php">Arena</a></li>
-			<li><a href="">Histórico</a></li>
 			<li><a href="dao/logout.php">Sair</a></li>
 		</ul>
 	</nav>

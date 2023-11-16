@@ -42,22 +42,21 @@ if ($atk['stat4'] > $def['stat4']) {
 if ($res > 0) {
     $SQLresultado = "INSERT INTO `batalha`(`player1`, `player2`, `vencedor`) VALUES ('" . $atk['nome'] . "','" . $def['nome'] . "','" . $atk['nome'] . "')";
     $somavitoria = $atk['vitorias'] + 1;
-    $sqlatualizabatalha = "UPDATE personagem SET vitorias=" . $somavitoria . " WHERE id=" . $atk['id'];
-    echo "vitoria";
+    $somaouro = $atk['ouro']+($def['ouro']/10);
+    $sqlatualizabatalha = "UPDATE personagem SET vitorias=" . $somavitoria . ", ouro = ". $somaouro . " WHERE id=" . $atk['id'];
     $executa2 = $conn->query($sqlatualizabatalha);
 } elseif ($res < 0) {
     $SQLresultado = "INSERT INTO `batalha`(`player1`, `player2`, `vencedor`) VALUES ('" . $atk['nome'] . "','" . $def['nome'] . "','" . $def['nome'] . "')";
     $somavitoria = $def['vitorias'] + 1;
-    $sqlatualizabatalha = "UPDATE personagem SET vitorias=" . $somavitoria . " WHERE id=" . $def['id'];
-    echo "derrota";
+    $somaouro = $def['ouro']+($atk['ouro']/10);
+    $sqlatualizabatalha = "UPDATE personagem SET vitorias=" . $somavitoria . ", ouro = ". $somaouro . " WHERE id=" . $def['id'];
     $executa2 = $conn->query($sqlatualizabatalha);
 } else {
     $SQLresultado = "INSERT INTO `batalha`(`player1`, `player2`, `vencedor`) VALUES ('" . $atk['nome'] . "','" . $def['nome'] . "','empate')";
 
-    	echo "empate";
 }
 $executa1 = $conn->query($SQLresultado);
-
+    header("location: ../inicial.php");
 }
 
 ?>

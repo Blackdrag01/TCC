@@ -3,7 +3,7 @@
 <head>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<link rel="stylesheet" type="text/css" href="../css/styles.css">
+	<link rel="stylesheet" type="text/css" href="styles.css">
 </head>
 <body>
 
@@ -16,10 +16,10 @@
 			<span></span>
 		</div>
 		<ul>
-			<li><a href="">Home</a></li>
-			<li><a href="">Sobre</a></li>
-			<li><a href="">Configurações</a></li>
-			<li><a href="">Sair</a></li>
+			<li><a href="inicial.php">Home</a></li>
+			<li><a href="arena.php">Arena</a></li>
+			<li><a href="">Histórico</a></li>
+			<li><a href="dao/logout.php">Sair</a></li>
 		</ul>
 	</nav>
 </body>

@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="styles.css">
     <title>RPG de Browser</title>
 </head>
 <body>
@@ -13,7 +13,7 @@
             
                 <div class="row">
                     <form action="dao/login.php" method="POST">
-                        <label for="">E-mail</label>
+                        <label for="">Nome de Usuário</label>
                         <input type="text" id="login" name="login">
                         <label for="">Senha</label>
                         <input type="password" name="senha" id="senha">

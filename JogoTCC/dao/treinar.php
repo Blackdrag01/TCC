@@ -9,24 +9,25 @@
         $stat = $status1['stat1'] + 1;
         $ouroareduzir = $status1['ouro'] - ($status1['stat1'] * $status1['stat1']);
         $conn->query("UPDATE personagem SET stat1 = '$stat', ouro = '$ouroareduzir' WHERE id = " . $_SESSION['id']);
+        header("location: ../inicial.php");
     } 
     else if (isset($_POST['agilidade'])) {
         $stat = $status1['stat2'] + 1;
         $ouroareduzir = $status1['ouro'] - ($status1['stat2'] * $status1['stat2']);
         $conn->query("UPDATE personagem SET stat2 = '$stat', ouro = '$ouroareduzir' WHERE id = " . $_SESSION['id']);
+        header("location: ../inicial.php");
     }
     else if (isset($_POST['destreza'])) {
         $stat = $status1['stat3'] + 1;
         $ouroareduzir = $status1['ouro'] - ($status1['stat3'] * $status1['stat3']);
         $conn->query("UPDATE personagem SET stat3 = '$stat', ouro = '$ouroareduzir' WHERE id = " . $_SESSION['id']);
+        header("location: ../inicial.php");
     }
     else if (isset($_POST['resistencia'])) {
         $stat = $status1['stat4'] + 1;
         $ouroareduzir = $status1['ouro'] - ($status1['stat4'] * $status1['stat4']);
         $conn->query("UPDATE personagem SET stat4 = '$stat', ouro = '$ouroareduzir' WHERE id = " . $_SESSION['id']);
+        header("location: ../inicial.php");
     }
-    else {
-        echo "Você não tem ouro suficiente";
-        echo "<br><a href='../registrar.php'><button>Voltar</button></a>";
-    }
+
 ?>
